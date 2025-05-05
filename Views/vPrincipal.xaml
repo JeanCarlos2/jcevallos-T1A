@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jcevallos_T1A.Views.vPrincipal"
+             Title="vPrincipal">
+   
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Image Source="https://sige.uisrael.edu.ec/imagenes/logo%20oficial.png"
+           HeightRequest="150"
+           HorizontalOptions="Center"/>
+
+            <Label Text="Formulario de Inscripción" 
+                   FontSize="20" HorizontalOptions="Center"/>
+
+            <Entry x:Name="txtCedula"
+                   Placeholder="Cédula (Solo números)" 
+                   Keyboard="Numeric"/>
+            <Entry x:Name="txtNombres" 
+                   Placeholder="Nombres (Solo letras)"/>
+            <Entry x:Name="txtApellidos" 
+                   Placeholder="Apellidos (Solo letras)"/>
+            <DatePicker x:Name="dateNacimiento"/>
+
+            <Entry x:Name="txtCorreo" 
+                   Placeholder="Correo Electrónico" 
+                   Keyboard="Email"/>
+            <Entry x:Name="txtConfirmarCorreo" 
+                   Placeholder="Confirmar Correo" 
+                   Keyboard="Email"/>
+
+            <Picker x:Name="pickerCarrera" Title="Carrera">
+                <Picker.Items>
+                    <x:String>Sistemas</x:String>
+                    <x:String>Contabilidad</x:String>
+                    <x:String>Educación</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="Guardar en TXT" 
+                    Clicked="Button_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
